@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.topic {
+    width: 20%;
+    outline: 1px solid grey;
+    padding: 20px 1.4vw 12px;
+}
+
+.topic h2 {
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+}
+
+dl dd {
+    margin-bottom: 1rem;
+}

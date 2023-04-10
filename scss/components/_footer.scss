@@ -1,0 +1,20 @@
+footer {
+    border: 2px solid grey;
+    text-align: center;
+    margin-top: auto;
+    padding: 2.2rem 1.1vw 1rem;
+
+    ul {
+        text-align: left;
+        margin-bottom: 2.8rem;
+
+        a {
+            display: inline-block;
+            padding: .2rem;
+        }
+    }
+
+    small {
+        width: 100%;
+    }
+}

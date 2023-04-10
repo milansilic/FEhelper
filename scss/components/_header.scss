@@ -1,0 +1,97 @@
+header {
+   position: relative;
+   padding: .9rem 1.4vw 2rem;
+
+   hgroup {
+      align-items: center;
+      margin-bottom: 2vh;
+   }
+
+   nav {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 20vw;
+      max-width: 300px;
+
+      img {
+         display: block;
+         cursor: pointer;
+         
+         height: auto;
+         &:nth-of-type(1) {
+            width: 22px;
+         }
+         &:nth-of-type(2) {
+            width: 38px;
+         }
+         &:nth-of-type(3),
+         &:nth-of-type(4) {
+            width: 56px;
+         }
+      }
+   }
+}
+
+h1 {
+   display: inline-block;
+   margin-right: auto;
+}
+
+.calculator2 {
+   display: inline-block;
+}
+
+.calculator2 span {
+   width: 6rem;
+   display: inline-block;
+   text-align: center;
+}
+
+.calculator2 span input {
+   border: none;
+   outline: none;
+   width: 100%;
+   font-size: 1.4rem;
+   text-align: center;
+   color: var(--form-active);
+}
+
+.calculator2 span:nth-of-type(4) input {
+   color: var(--form-passive);
+}
+
+.calculator1 {
+   display: inline-block;
+}
+
+.calculator1 span {
+   width: 6rem;
+   display: inline-block;
+   text-align: center;
+}
+
+.calculator1 span input {
+   border: none;
+   outline: none;
+   width: 100%;
+   font-size: 1.4rem;
+   text-align: center;
+   color: var(--form-active);
+}
+
+.calculator1 span:nth-of-type(4) input {
+   color: var(--form-passive);
+}
+
+
+
+
+// .calculator2 input,
+// .calculator1 input { border: 2px solid yellow !important;
+//     width: 200px !important;
+// }
