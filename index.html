@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,301 +9,349 @@
    <link rel="stylesheet" href="css/app.min.css">
    <title>Frontenders Helper</title>
 </head>
+
 <body>
    <header>
-      <hgroup class="flex-space-between">
-         <h1>Frontenders Helper</h1>
-         <table>
-            <tr>
-               <th>Inner window size:</th>
-               <td id="aaa"></td>
-               <td id="bbb"></td>
-            </tr>
-            <tr>
-               <th>Outer window size:</th>
-               <td id="ccc"></td>
-               <td id="ddd"></td>
-            </tr>
-         </table>
-      </hgroup>
-      <form class="flex-space-between">
-         <fieldset class="calculator1">
-            <h2>px to vw calculator</h2>
-            <span>
-               <label for="">element (px)</label><br>
-               <input id="c1_num1" type="number" name="" value="">
-            </span>
-            <span>
-               <label for="">screen (px)</label><br>
-               <input id="c1_num2" type="number" name="" value="1920">
-            </span>
-            <span>
-               <label for="">result (vw)</label><br>
-               <input id="c1_num3" type="number" name="" value="" title="click to COPY">
-            </span>
-         </fieldset>
-         <fieldset class="calculator2">
-            <h2>ratio calculator</h2>
-            <span>
-               <label for="">if this</label><br>
-               <input id="c2_num1" type="number" name="" value="">
-            </span>
-            <span>
-               <label for="">is eaqual to</label><br>
-               <input id="c2_num2" type="number" name="" value="100">
-            </span>
-            <span>
-               <label for="">then this</label><br>
-               <input id="c2_num3" type="number" name="" value="">
-            </span>
-            <span>
-               <label for="">is eaqual to</label><br>
-               <input id="c2_num4" type="number" name="" value="" title="click to COPY">
-            </span>
-         </fieldset>
-      </form>
       <nav>
          <img src="icons/mob02.svg" onclick="setScreenWidth(375)" alt="mobile">
-         <img src="icons/tab01.svg" onclick="setScreenWidth(1024)" alt="tablet">
-         <img src="icons/laptop06.svg" onclick="setScreenWidth(1366)" alt="laptop">
+         <img src="icons/tab01.svg" onclick="setScreenWidth(768)" alt="tablet">
+         <img src="icons/laptop06.svg" onclick="setScreenWidth(1280)" alt="laptop">
+         <img src="icons/desk16.svg" onclick="setScreenWidth(1440)" alt="desktop">
          <img src="icons/desk15.svg" onclick="setScreenWidth(1920)" alt="desktop">
       </nav>
+      <h1>Frontenders Helper</h1>
+      <table>
+         <tr>
+            <th>Inner window size:</th>
+            <td id="iwW"></td>
+            <td id="iwH"></td>
+         </tr>
+         <tr>
+            <th>Outer window size:</th>
+            <td id="owW"></td>
+            <td id="owH"></td>
+         </tr>
+      </table>
+      <form class="calculator1">
+         <h2>px to vw calc:</h2>
+         <span>
+            <label for="">value (px)</label><br>
+            <input id="c1_num1" type="number" name="" value="">
+         </span>
+         <span>
+            <label for="">screen (px)</label><br>
+            <input id="c1_num2" type="number" name="" value="1920">
+         </span>
+         <span>
+            <label for="">result (vw)</label><br>
+            <input id="c1_num3" type="number" name="" value="" title="select to COPY">
+         </span>
+      </form>
+      <form class="calculator3">
+         <h2>px to rem calc:</h2>
+         <span>
+            <label for="">root (px)</label><br>
+            <input id="c3_num1" type="number" name="" value="16">
+         </span>
+         <span>
+            <label for="">pixels</label><br>
+            <input id="c3_num2" type="number" name="" value="" title="select to COPY">
+         </span>
+         <span>
+            <label for="">rems</label><br>
+            <input id="c3_num3" type="number" name="" value="" title="select to COPY">
+         </span>
+      </form>
+      <form class="calculator2">
+         <h2>ratio calc:</h2>
+         <span>
+            <label for="">if this</label><br>
+            <input id="c2_num1" type="number" name="" value="">
+         </span>
+         <span>
+            <label for="">is eaqual to</label><br>
+            <input id="c2_num2" type="number" name="" value="100">
+         </span>
+         <span>
+            <label for="">then this</label><br>
+            <input id="c2_num3" type="number" name="" value="">
+         </span>
+         <span>
+            <label for="">is eaqual to</label><br>
+            <input id="c2_num4" type="number" name="" value="" title="select to COPY">
+         </span>
+      </form>
    </header>
    <nav></nav>
    <main>
-      
       <nav class="topic">
          <h2>layout & metrics</h2>
          <dl>
-            <dt><a href="https://ui.dev/amiresponsive" target="_blank">quick responsive check</a></dt>
-            <dd></dd>
-            <dt><a href="https://responsivedesignchecker.com/" target="_blank">responsive design checker</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.mydevice.io/" target="_blank">screen metrics</a></dt>
-            <dd></dd>
+            <dt><a href="https://ui.dev/amiresponsive" target="_blank">Am I Responsive</a></dt>
+            <dd>quick responsive check</dd>
+            <dt><a href="https://responsivedesignchecker.com/" target="_blank">Responsive Design Checker</a></dt>
+            <dd>more detailed responsive check</dd>
+            <dt><a href="https://www.mydevice.io/" target="_blank">My Device</a></dt>
+            <dd>screen metrics</dd>
          </dl>
       </nav>
       <nav class="topic">
          <h2>code/syntax</h2>
          <dl>
-            <dt><a href="https://caniuse.com/" target="_blank">"Can I Use"</a></dt>
-            <dd>check browser support</dd>
-            <dt><a href="https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element"
-                  target="_blank">html.spec</a></dt>
+            <dt><a href="https://caniuse.com/" target="_blank">Can I Use</a></dt>
+            <dd>browser support checker</dd>
+            <dt><a href="https://html.spec.whatwg.org/multipage/" target="_blank">HTML spec</a></dt>
             <dd>HTML standard</dd>
          </dl>
       </nav>
       <nav class="topic">
          <h2>code generators</h2>
          <dl>
-            <dt><a href="https://webcode.tools/generators/css" target="_blank">ultimate css generator</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.cssmatic.com/box-shadow" target="_blank">box shadow generator</a></dt>
-            <dd>get desired box-shadow declarations</dd>
-            <dt><a href="https://bennettfeely.com/clippy/" target="_blank">clip path generator</a></dt>
-            <dd>get desired clip-path shape, property value</dd>
+            <dt><a href="https://webcode.tools/generators/css" target="_blank">Ultimate CSS generator</a></dt>
+            <dd>by Web Code Tools</dd>
+            <dt><a href="https://www.cssmatic.com/box-shadow" target="_blank">Box Shadow generator</a></dt>
+            <dd>by CSS Matic</dd>
+            <dt><a href="https://cssgradient.io/" target="_blank">Gradient generator</a></dt>
+            <dd>by CSSgradient</dd>
+            <dt><a href="https://bennettfeely.com/clippy/" target="_blank">Clip Path generator</a></dt>
+            <dd>by Bennett Feely</dd>
+            <dt><a href="https://9elements.github.io/fancy-border-radius/" target="_blank">Border Radius generator</a></dt>
+            <dd>by Fancy Border Radius</dd>
+            <dt><a href="https://bennettfeely.com/clippy/" target="_blank">Cubic Bezier generator</a></dt>
+            <dd>cubic-bezier.com</dd>
          </dl>
       </nav>
       <nav class="topic">
-         <h2>code optimisers</h2>
+         <h2>code fixers</h2>
          <dl>
-            <dt><a href="http://pleeease.iamvdo.me/play/" target="_blank">vendor prefix generator</a></dt>
-            <dd>get vendor prefixes</dd>
-            <dt><a href="https://www.digitalocean.com/community/tools/minify" target="_blank">"javascript minifier
-                  1"</a></dt>
-            <dd></dd>
-            <dt><a href="https://skalman.github.io/UglifyJS-online/" target="_blank">"javascript minifier 2"</a>
-            </dt>
-            <dd></dd>
-            <dt><a href="https://beautifytools.com/javascript-minifier.php" target="_blank">"javascript minifier
-                  3"</a></dt>
-            <dd></dd>
-            <dt><a href="https://beautifytools.com/javascript-beautifier.php" target="_blank">"javascript
-                  beautifier"</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.minifier.org/" target="_blank">"css & javascript minifier"</a></dt>
-            <dd></dd>
-            <dt><a href="https://jsonlint.com/" target="_blank">"JSONLint"</a></dt>
+            <dt><a href="https://pleeease.iamvdo.me/play/" target="_blank">Pleeease stylesheet cleaner</a></dt>
+            <dd>...with vendor prefix generator</dd>
+            <dt><a href="https://beautifytools.com/" target="_blank">Beautify Tools</a></dt>
+            <dd>multi language beautify & minify tool</dd>
+            <dt><a href="https://jsonlint.com/" target="_blank">JSON Lint</a></dt>
             <dd>JSON validator</dd>
-            <dt><a href="https://jsonformatter.curiousconcept.com/" target="_blank">"jsonformatter"</a></dt>
+            <dt><a href="https://jsonformatter.curiousconcept.com/" target="_blank">JSONformatter</a></dt>
             <dd>JSON formatter</dd>
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>elements</h2>
-         <dl>
-            <dt><a href="https://getcssscan.com/css-buttons-examples" target="_blank">button library 1</a></dt>
-            <dd></dd>
-            <dt><a href="https://markodenic.com/tools/buttons-generator/" target="_blank">button library 2</a></dt>
-            <dd></dd>
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>typography & symbols</h2>
-         <dl>
-            <dt><a href="https://www.newocr.com/" target="_blank">img to text converter</a></dt>
-            <dd></dd>
-            <dt><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">HTML Symbols 1</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.toptal.com/designers/htmlarrows/punctuation/" target="_blank">HTML Symbols
-                  2</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.htmlsymbols.xyz/roman-symbols" target="_blank">HTML Symbols 3</a></dt>
-            <dd></dd>
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>image editors</h2>
-         <dl>
-            <dt><a href="https://www.photopea.com/" target="_blank">Photopea</a></dt>
-            <dd>advance online image editor</dd>
-            <dt><a href="https://jakearchibald.github.io/svgomg/" target="_blank">SVG OMG</a></dt>
-            <dd>svg file optimiser</dd>
-            <dt><a href="https://tinypng.com/" target="_blank">Tiny png</a></dt>
-            <dd>image compressor</dd>
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>images</h2>
-         <dl>
-            <dt><a href="https://yoksel.github.io/url-encoder/" target="_blank">SVG URL-encoder</a></dt>
-            <dd>use SVG in CSS</dd>
-            <dt><a href="https://doodad.dev/pattern-generator/" target="_blank">background generator</a></dt>
-            <dd></dd>
-            <dt><a href="https://unsplash.com/" target="_blank">"unsplash" img library 1</a></dt>
-            <dd></dd>
-            <dt><a href="https://skuawk.com/" target="_blank">"skuawk" img library 2</a></dt>
-            <dd></dd>
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>icons</h2>
-         <dl>
-            <dt><a href="https://realfavicongenerator.net/#.YhSkkOjMIuU" target="_blank">favicon generator</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.svgrepo.com/" target="_blank">"Svgrepo" SVG library</a></dt>
-            <dd>free SVG's</dd>
-            <dt><a href="https://www.snoweb-svg.com/" target="_blank">"Snoweb" SVG library</a></dt>
-            <dd>free SVG's</dd>
-            <dt><a href="https://iconmonstr.com/" target="_blank">"iconmonstr" SVG library</a></dt>
-            <dd>free SVG's</dd>
-            <dt><a href="https://iconduck.com/" target="_blank">"iconduck" icon library</a></dt>
-            <dd>free SVG icons</dd>
-
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>colors</h2>
-         <dl>
-            <dt><a href="https://color.adobe.com/create/color-wheel" target="_blank">color generator</a></dt>
-            <dd></dd>
-            <dt><a href="https://colors.muz.li/" target="_blank">color palette generator</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">color picker</a></dt>
-            <dd></dd>
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>fonts</h2>
-         <dl>
-            <dt><a href="https://fonts.google.com/" target="_blank">google fonts</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.fontsquirrel.com/" target="_blank">"font squirrel" fonts</a></dt>
-            <dd></dd>
-            <dt><a href="https://befonts.com/" target="_blank">"befonts" fonts</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank">Webfont Generator</a>
-            </dt>
-            <dd></dd>
-            <dt><a href="https://gwfh.mranftl.com/fonts" target="_blank">google fonts generator</a></dt>
-            <dd></dd>
-         </dl>
-      </nav>
-      <nav class="topic">
-         <h2>stats</h2>
-         <dl>
-            <dt><a href="https://gs.statcounter.com/screen-resolution-stats/" target="_blank">Screen Resolution
-                  Stats</a></dt>
-            <dd></dd>
          </dl>
       </nav>
       <nav class="topic">
          <h2>JS helpers</h2>
          <dl>
-            <dt><a href="https://www.workversatile.com/jquery-to-javascript-converter" target="_blank">jquery to js
-                  converter</a></dt>
-            <dd></dd>
-            <dt><a href="https://www.toptal.com/developers/keycode/" target="_blank">keycode generator</a></dt>
-            <dd></dd>
+            <dt><a href="https://www.digitalocean.com/community/tools/minify" target="_blank">JS minifier</a></dt>
+            <dd>by DigitalOcean</dd>
+            <dt><a href="https://www.toptal.com/developers/keycode/" target="_blank">Keycode generator</a></dt>
+            <dd>by Toptal</dd>
+            <dt><a href="https://www.workversatile.com/jquery-to-javascript-converter" target="_blank">JQuery to JS converter</a></dt>
+            <dd>by WorkVersatile</dd>
          </dl>
       </nav>
       <nav class="topic">
          <h2>JS plugins</h2>
          <dl>
-            <dt><a href="https://swiperjs.com/swiper-api" target="_blank">swiperJS API</a></dt>
-            <dd>documentation</dd>
+            <dt><a href="https://swiperjs.com/swiper-api" target="_blank">SwiperJS</a></dt>
+            <dd>touch slider library</dd>
+            <dt><a href="https://leafletjs.com/" target="_blank">LeafletJS map</a></dt>
+            <dd>mobile-friendly interactive maps</dd>
          </dl>
       </nav>
       <nav class="topic">
-         <h2>page speed</h2>
+         <h2>typography</h2>
          <dl>
-            <dt><a href="https://pagespeed.web.dev/" target="_blank">page speed optimisation</a></dt>
-            <dd></dd>
+            <dt><a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank">Font-Face generator</a></dt>
+            <dd>by Transfonter</dd>
+            <dt><a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank">Webfont Generator</a></dt>
+            <dd>by Font Squirrel</dd>
+            <dt><a href="https://gwfh.mranftl.com/fonts" target="_blank">Google Fonts Helper</a></dt>
+            <dd>self-host google fonts</dd>
+            <dt><a href="https://www.newocr.com/" target="_blank">Optical Character Recognition</a></dt>
+            <dd>extract text from image</dd>
          </dl>
       </nav>
       <nav class="topic">
-         <h2>tracking</h2>
+         <h2>HTML symbols</h2>
          <dl>
-            <dt><a href="https://analytics.google.com/analytics/" target="_blank">google analytics</a></dt>
-            <dd></dd>
-            <dt><a href="https://tagmanager.google.com/#/home" target="_blank">google tag mnager</a></dt>
-            <dd></dd>
+            <dt><a href="https://dev.w3.org/html5/html-author/charref" target="_blank">Named character references</a></dt>
+            <dd>list of character reference names</dd>
+            <dt><a href="https://www.toptal.com/designers/htmlarrows/punctuation/" target="_blank">HTML Arrows</a></dt>
+            <dd>symbols, codes, entities, characters...</dd>
+            <dt><a href="https://www.htmlsymbols.xyz/roman-symbols" target="_blank">HTML Symbols</a></dt>
+            <dd>unicode symbols, entities, codes...</dd>
          </dl>
       </nav>
       <nav class="topic">
-         <h2>tests & games</h2>
+         <h2>animations</h2>
          <dl>
-            <dt><a href="https://flexboxfroggy.com/" target="_blank">display: flex</a></dt>
-            <dd>flex frogy</dd>
-            <dt><a href="https://cssgridgarden.com/" target="_blank">display: grid</a></dt>
-            <dd>grid garden</dd>
-            <dt><a href="https://cssbattle.dev/" target="_blank">css battle</a></dt>
-            <dd>grid garden</dd>
-            <dt><a href="https://www.codewars.com/" target="_blank">"Code Wars"</a></dt>
-            <dd>code wars challenge</dd>
-            <dt><a href="https://www.speedtypingonline.com/typing-test" target="_blank">"speed typing"</a></dt>
-            <dd></dd>
+            <dt><a href="https://animista.net/" target="_blank">Animista</a></dt>
+            <dd>pre made CSS animations</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>fonts</h2>
+         <dl>
+            <dt><a href="https://befonts.com/" target="_blank">Befonts</a></dt>
+            <dd>font library</dd>
+            <dt><a href="https://fontsrepo.com/" target="_blank">Fontsrepo</a></dt>
+            <dd>font library</dd>
+            <dt><a href="https://fontesk.com/" target="_blank">Fontesk</a></dt>
+            <dd>font library</dd>
+            <dt><a href="https://www.fontsquirrel.com/" target="_blank">Font Squirrel</a></dt>
+            <dd>font library</dd>
+            <dt><a href="https://www.fontspace.com/" target="_blank">Fontspace</a></dt>
+            <dd>font library</dd>
+            <dt><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></dt>
+            <dd>font library</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>SVG editors</h2>
+         <dl>
+            <dt><a href="https://svgcrop.com/" target="_blank">Svgcrop</a></dt>
+            <dd>simple SVG autocrop</dd>
+            <dt><a href="https://yoksel.github.io/url-encoder/" target="_blank">img2go Cropping Tool</a></dt>
+            <dd>good SVG crop tool</dd>
+            <dt><a href="https://jakearchibald.github.io/svgomg/" target="_blank">SVG OMG</a></dt>
+            <dd>SVG file optimiser</dd>
+            <dt><a href="https://yoksel.github.io/url-encoder/" target="_blank">SVG URL-encoder</a></dt>
+            <dd>use SVG in CSS</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>icons</h2>
+         <dl>
+            <dt><a href="https://www.svgrepo.com/" target="_blank">Svgrepo</a></dt>
+            <dd>SVG library</dd>
+            <dt><a href="https://www.snoweb-svg.com/" target="_blank">Snoweb</a></dt>
+            <dd>SVG library</dd>
+            <dt><a href="https://iconmonstr.com/" target="_blank">Iconmonstr</a></dt>
+            <dd>SVG library</dd>
+            <dt><a href="https://iconduck.com/" target="_blank">Iconduck</a></dt>
+            <dd>SVG library</dd>
          </dl>
       </nav>
       <nav class="topic">
          <h2>file transfer</h2>
          <dl>
-            <dt><a href="https://fromsmash.com/" target="_blank">smash</a></dt>
-            <dd></dd>
+            <dt><a href="https://fromsmash.com/" target="_blank">Smash</a></dt>
+            <dd>fast file transfer service</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>image editors</h2>
+         <dl>
+            <dt><a href="https://squoosh.app/" target="_blank">Squoosh</a></dt>
+            <dd>image compression app</dd>
+            <dt><a href="https://www.photopea.com/" target="_blank">Photopea</a></dt>
+            <dd>advance online image editor</dd>
+            <dt><a href="https://tinypng.com/" target="_blank">Tiny png</a></dt>
+            <dd>WebP, PNG & JPEG optimiser</dd>
+            <dt><a href="https://realfavicongenerator.net/#.YhSkkOjMIuU" target="_blank">RealFaviconGenerator</a></dt>
+            <dd>favicon generator</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>images</h2>
+         <dl>
+            <dt><a href="https://pixabay.com/" target="_blank">Pixabay</a></dt>
+            <dd>img library</dd>
+            <dt><a href="https://unsplash.com/" target="_blank">Unsplash</a></dt>
+            <dd>img library</dd>
+            <dt><a href="https://skuawk.com/" target="_blank">Skuawk</a></dt>
+            <dd>img library</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>colors</h2>
+         <dl>
+            <dt><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">W3 color picker</a></dt>
+            <dd>basic color picker</dd>
+            <dt><a href="https://colors.muz.li/" target="_blank">Muzli palette generator</a></dt>
+            <dd>simple palette generator</dd>
+            <dt><a href="https://coolors.co/373f51-008dd5-dfbbb1-f56476-e43f6f" target="_blank">Coolors palette generator</a></dt>
+            <dd>clean palette generator</dd>
+            <dt><a href="https://www.canva.com/colors/color-wheel/" target="_blank">Canva color wheel</a></dt>
+            <dd>simple color wheel</dd>
+            <dt><a href="https://color.adobe.com/create/color-wheel" target="_blank">Adobe color workshop</a></dt>
+            <dd>diverse color generator</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>elements</h2>
+         <dl>
+            <dt><a href="https://getcssscan.com/css-buttons-examples" target="_blank">Buttons</a></dt>
+            <dd>by CSS Scan</dd>
+            <dt><a href="https://markodenic.com/tools/buttons-generator/" target="_blank">Buttons</a></dt>
+            <dd>by Marko Denic</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>page speed</h2>
+         <dl>
+            <dt><a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a></dt>
+            <dd>page speed optimisation</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>tracking</h2>
+         <dl>
+            <dt><a href="https://analytics.google.com/analytics/" target="_blank">Google Analytics</a></dt>
+            <dd>web analytics service</dd>
+            <dt><a href="https://tagmanager.google.com/#/home" target="_blank">Google Tag Manager</a></dt>
+            <dd>track actions on your website</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>stats</h2>
+         <dl>
+            <dt><a href="https://gs.statcounter.com/screen-resolution-stats" target="_blank">Screen Resolution Stats</a></dt>
+            <dd>by Statcounter</dd>
+            <dt><a href="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank">Desktop vs Mobile vs Tablet</a></dt>
+            <dd>by Statcounter</dd>
+            <dt><a href="https://gs.statcounter.com/browser-version-market-share" target="_blank">Browser Version Market Share</a></dt>
+            <dd>by Statcounter</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>tests</h2>
+         <dl>
+            <dt><a href="https://cssbattle.dev/" target="_blank">CSS Battle</a></dt>
+            <dd>put your CSS skills to the test</dd>
+            <dt><a href="https://www.codewars.com/" target="_blank">Code Wars</a></dt>
+            <dd>achieve mastery through challenge</dd>
+            <dt><a href="https://www.speedtypingonline.com/typing-test" target="_blank">Speed Typing Online</a></dt>
+            <dd>Check your typing speed</dd>
+         </dl>
+      </nav>
+      <nav class="topic">
+         <h2>games</h2>
+         <dl>
+            <dt><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></dt>
+            <dd>a game for learning CSS flexbox</dd>
+            <dt><a href="https://cssgridgarden.com/" target="_blank">Grid Garden</a></dt>
+            <dd>a game for learning CSS grid</dd>
          </dl>
       </nav>
    </main>
    <footer class="flex-space-evenly">
       <ul>
-         <li><a href="https://developer.mozilla.org/en-US/">developer mozilla</a></li>
-         <li><a href="https://www.w3schools.com/">w3 schools</a></li>
-         <li><a href="https://javascript.info/">javascript.info</a></li>
-         <li><a href="https://css-tricks.com/">css-tricks</a></li>
-         <li><a href="https://www.smashingmagazine.com/">smashing magazine</a></li>
+         <li><a href="https://developer.mozilla.org/en-US/" target="_blank">developer mozilla</a></li>
+         <li><a href="https://www.w3schools.com/" target="_blank">w3 schools</a></li>
+         <li><a href="https://javascript.info/" target="_blank">javascript.info</a></li>
+         <li><a href="https://css-tricks.com/" target="_blank">css-tricks</a></li>
+         <li><a href="https://www.smashingmagazine.com/" target="_blank">smashing magazine</a></li>
       </ul>
       <ul>
-         <li><a href="https://code.visualstudio.com/download">visual studio</a></li>
-         <li><a href="https://nodejs.org/en/download">node js</a></li>
-         <li><a href="https://angular.io/cli">angular</a></li>
-         <li><a href="https://sass-lang.com/install">scss</a></li>
-         <li><a href="https://swiperjs.com/get-started">swiper js</a></li>
+         <li><a href="https://code.visualstudio.com/download" target="_blank">visual studio</a></li>
+         <li><a href="https://nodejs.org/en/download" target="_blank">node js</a></li>
+         <li><a href="https://angular.io/cli" target="_blank">angular</a></li>
+         <li><a href="https://sass-lang.com/install" target="_blank">scss</a></li>
+         <li><a href="https://www.figma.com/" target="_blank">figma</a></li>
       </ul>
       <ul>
-         <li><a href="https://www.youtube.com/@freecodecamp">free code camp</a></li>
-         <li><a href="https://www.youtube.com/@KevinPowell">Kevin Powell</a></li>
-         <li><a href="https://www.youtube.com/@WebDevSimplified">web dev simplified</a></li>
-         <li><a href="https://www.youtube.com/@Fireship/videos">fireship</a></li>
-         <li><a href="https://www.youtube.com/@developedbyed/videos">developed by ed</a></li>
+         <li><a href="https://www.youtube.com/@freecodecamp" target="_blank">free code camp</a></li>
+         <li><a href="https://www.youtube.com/@KevinPowell" target="_blank">Kevin Powell</a></li>
+         <li><a href="https://www.youtube.com/@WebDevSimplified" target="_blank">web dev simplified</a></li>
+         <li><a href="https://www.youtube.com/@Fireship/videos" target="_blank">fireship</a></li>
+         <li><a href="https://www.youtube.com/@developedbyed/videos" target="_blank">developed by ed</a></li>
       </ul>
       <small>&#169; copyright Milan Silic 2022</small>
    </footer class>

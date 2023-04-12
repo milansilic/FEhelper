@@ -20,11 +20,11 @@ input[type=number] {
 }
 
 :root {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
-  background: lightblue;
+  background: var(--col-main);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,6 +33,10 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 table {
@@ -50,6 +54,21 @@ table td {
 :root {
   --form-active: #222;
   --form-passive: #999;
+  --col-main: #C9D7F8;
+  --col-main2: #7FA3F9;
+  --col-dark: #3D4F78;
+  --col-dark-grey: #616878;
+  --col-light-grey: #9FAAC4;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 2.569vw, 2.3rem);
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 1.563vw, 1.5rem);
 }
 
 .flex-space-between {
@@ -75,87 +94,89 @@ table td {
 }
 
 header {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 3vh 0;
   padding: 0.9rem 1.4vw 2rem;
 }
-header hgroup {
-  align-items: center;
-  margin-bottom: 2vh;
+header h1 {
+  color: var(--col-dark);
+}
+header .calculator1,
+header nav {
+  justify-self: start;
+}
+header .calculator2,
+header table {
+  justify-self: end;
 }
 header nav {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  align-self: end;
+}
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 20vw;
-  max-width: 300px;
+  width: 15.7rem;
 }
 header nav img {
   display: block;
-  cursor: pointer;
   height: auto;
+  cursor: pointer;
 }
 header nav img:nth-of-type(1) {
-  width: 22px;
+  width: 17px;
 }
 header nav img:nth-of-type(2) {
-  width: 38px;
+  width: 28px;
 }
-header nav img:nth-of-type(3), header nav img:nth-of-type(4) {
-  width: 56px;
+header nav img:nth-of-type(3) {
+  width: 43px;
 }
-
-h1 {
-  display: inline-block;
-  margin-right: auto;
+header nav img:nth-of-type(4) {
+  width: 35px;
 }
-
-.calculator2 {
-  display: inline-block;
+header nav img:nth-of-type(5) {
+  width: 44px;
 }
 
-.calculator2 span {
-  width: 6rem;
+.calculator1 h2,
+.calculator2 h2,
+.calculator3 h2 {
+  color: var(--col-main2);
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+.calculator1 span,
+.calculator2 span,
+.calculator3 span {
+  width: 5rem;
   display: inline-block;
   text-align: center;
 }
-
-.calculator2 span input {
+.calculator1 span label,
+.calculator2 span label,
+.calculator3 span label {
+  margin-bottom: 0.1em;
+  font-size: 16px;
+}
+.calculator1 span input,
+.calculator2 span input,
+.calculator3 span input {
   border: none;
   outline: none;
   width: 100%;
-  font-size: 1.4rem;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
   color: var(--form-active);
-}
-
-.calculator2 span:nth-of-type(4) input {
-  color: var(--form-passive);
-}
-
-.calculator1 {
-  display: inline-block;
-}
-
-.calculator1 span {
-  width: 6rem;
-  display: inline-block;
   text-align: center;
+  font-family: Calibri, sans-serif;
+  font-size: 1.2rem;
 }
-
-.calculator1 span input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 1.4rem;
-  text-align: center;
-  color: var(--form-active);
-}
-
-.calculator1 span:nth-of-type(4) input {
+.calculator1 span:nth-of-type(4) input,
+.calculator2 span:nth-of-type(4) input,
+.calculator3 span:nth-of-type(4) input {
   color: var(--form-passive);
 }
 
@@ -167,25 +188,42 @@ main {
 }
 
 .topic {
+  outline: px solid grey;
   width: 20%;
-  outline: 1px solid grey;
-  padding: 20px 1.4vw 12px;
+  padding: 20px 0 12px 3.5vw;
 }
 
 .topic h2 {
+  color: var(--col-dark-grey);
   text-transform: capitalize;
   margin-bottom: 0.5rem;
 }
 
+dt a {
+  color: var(--col-dark);
+  font-size: 1rem;
+  font-size: clamp(1rem, 1.237vw, 1.188rem);
+  font-weight: 600;
+}
+dt a:hover {
+  color: var(--col-main2);
+}
+
 dl dd {
-  margin-bottom: 1rem;
+  color: var(--col-dark-grey);
+  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 1.181vw, 1.063rem);
+  font-weight: 300;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
 }
 
 footer {
-  border: 2px solid grey;
+  border: 1px solid grey;
   text-align: center;
   margin-top: auto;
-  padding: 2.2rem 1.1vw 1rem;
+  padding: 2.5rem 1.2vw 1.2rem;
 }
 footer ul {
   text-align: left;

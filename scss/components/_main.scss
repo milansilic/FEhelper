@@ -5,17 +5,34 @@ main {
     justify-content: flex-start;
 }
 
-.topic {
+.topic { outline: px solid grey;
     width: 20%;
-    outline: 1px solid grey;
-    padding: 20px 1.4vw 12px;
+    padding: 20px 0 12px 3.5vw;
 }
 
 .topic h2 {
+    color: var(--col-dark-grey);
     text-transform: capitalize;
     margin-bottom: .5rem;
 }
 
+dt a { 
+    color: var(--col-dark);
+    font-size: 1rem;
+    font-size: clamp(1rem, 1.237vw, 1.188rem);
+    font-weight: 600;
+
+    &:hover {
+        color: var(--col-main2);
+    }
+}
+
 dl dd {
-    margin-bottom: 1rem;
+    color: var(--col-dark-grey);
+    font-size: .875rem;
+    font-size: clamp(.875rem, 1.181vw, 1.063rem);
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+    margin-bottom: .8rem;
 }
