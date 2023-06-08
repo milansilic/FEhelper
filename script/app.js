@@ -19,10 +19,13 @@ const c1Num1 = document.getElementById('c1_num1'),
     
 
 // CALC 1
+
+let executeCalc1 = ()=> {
+    c1Num1.value ? c1Num3.value = ((c1Num1.value / c1Num2.value) * 100).toFixed(3) : c1Num3.value = null
+}
+
 for (const input of calc1Values) {
-    input.oninput = () => {
-        c1Num3.value = ((c1Num1.value / c1Num2.value) * 100).toFixed(3)
-    }
+    input.oninput = ()=> executeCalc1()
 }
 c1Num3.onselect = () => navigator.clipboard.writeText(c1Num3.value + 'vw')
 
@@ -30,11 +33,7 @@ c1Num3.onselect = () => navigator.clipboard.writeText(c1Num3.value + 'vw')
 for (const input of calc2Values) {
     input.oninput = () => {
         c2Num3.value = c2Num2.value / c2Num1.value;
-        if (Math.round(c2Num3.value) == c2Num3.value) {
-            c2Num3.value = (c2Num2.value / c2Num1.value).toFixed(0)
-        } else {
-            c2Num3.value = (c2Num2.value / c2Num1.value).toFixed(3)
-        }
+        Math.round(c2Num3.value) == c2Num3.value ? c2Num3.value = (c2Num2.value/c2Num1.value).toFixed(0) : c2Num3.value = (c2Num2.value/c2Num1.value).toFixed(3)
     }
 }
 c2Num2.onselect = () => navigator.clipboard.writeText(c2Num2.value + 'px')
@@ -74,5 +73,5 @@ let topicHeights = 0;
 // SET SCREEN WIDTH VALUE FOR px to vw calculator
 const setScreenWidth = vl => {
     c1Num2.value = vl
-    c1Num3.value = ((c1Num1.value / c1Num2.value) * 100).toFixed(3)
+    executeCalc1()
 }
