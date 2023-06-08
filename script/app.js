@@ -66,7 +66,7 @@ let topicHeights = 0;
     getWinDim();
     topicHeights = 0;
     for (const tpc of topics) { topicHeights = topicHeights + tpc.offsetHeight; }
-    main[0].style.height = (topicHeights / 4.5) + 'px';
+    main[0].style.height = (topicHeights / 4.54) + 'px';
 }));
 
 
